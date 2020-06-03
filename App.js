@@ -14,6 +14,7 @@ import {
 } from 'react-native';
 // import AppNavigator from './navigation/MainTabNavigator'
 import AppNavigator from './navigation/AppNavigator'
+// import AppNavigator from './testRoute'
 
 export default class App extends Component {
   render(){

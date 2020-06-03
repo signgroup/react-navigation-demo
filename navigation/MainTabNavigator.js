@@ -22,11 +22,17 @@ const Stack = createStackNavigator();
 // 首页的路由栈
 const HomeStackScreen = () => {
     return (
-        <Stack.Navigator>
+        <Stack.Navigator  initialRouteName="Detail1">
             <Stack.Screen name="Home" component={HomeScreen} options={{
                 title: 'Home'
             }} />
+            <Stack.Screen name="Detail1" component={Detail1}
+                          options={{
+                              title: 'Home11111111'
+                          }} />
         </Stack.Navigator>
+
+
     )
 }
 // 首页的路由栈
