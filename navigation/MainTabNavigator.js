@@ -2,43 +2,14 @@ import React, {Component} from 'react';
 
 import {
     StyleSheet,
-    View,
     Image,
-    Text,
-    Button,
 } from 'react-native';
 
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import {createStackNavigator} from '@react-navigation/stack';
-import {NavigationContainer} from '@react-navigation/native';
 
 import HomeScreen from './../page/Home/Index';
 import MineScreen from './../page/Mine/Index';
-import Detail1 from './../page/Home/Detail1';
-import Detail2 from './../page/Mine/Detail2';
 
-
-const Stack = createStackNavigator();
-// 首页的路由栈
-const HomeStackScreen = () => {
-    return (
-        <Stack.Navigator>
-            <Stack.Screen name="Home" component={HomeScreen} options={{
-                title: 'Home'
-            }} />
-        </Stack.Navigator>
-    )
-}
-// 首页的路由栈
-const MineStackScreen = () => {
-    return (
-        <Stack.Navigator>
-            <Stack.Screen name="Mine" component={MineScreen} options={{
-                title: 'Mine'
-            }} />
-        </Stack.Navigator>
-    )
-}
 
 const Tab = createBottomTabNavigator();
 export default class MainTabNavigator extends Component {
@@ -55,7 +26,7 @@ export default class MainTabNavigator extends Component {
                         backgroundColor: '#FFFFFF',
                     }}
                 >
-                    <Tab.Screen name="Home" component={HomeStackScreen}
+                    <Tab.Screen name="Home" component={HomeScreen}
                                 options={{
                                     tabBarIcon: ({color}) => (
                                         <Image
@@ -65,7 +36,7 @@ export default class MainTabNavigator extends Component {
                                 }}
 
                     />
-                    <Tab.Screen name="Mine" component={MineStackScreen}
+                    <Tab.Screen name="Mine" component={MineScreen}
                                 options={{
                                     tabBarIcon: ({color}) => (
                                         <Image
