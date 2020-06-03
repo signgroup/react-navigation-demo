@@ -5,6 +5,7 @@ import {
     View,
     Text, Button,
 } from 'react-native';
+import { CommonActions } from '@react-navigation/native';
 
 export default class Mine extends Component {
     render() {
@@ -12,10 +13,14 @@ export default class Mine extends Component {
             <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
                 <Text>Mine!</Text>
                 <Button
-                    title="Go to Details"
+                    title={"Go to Details"}
                     onPress={() =>{
-                        console.log('Details2')
-                        this.props.navigation.navigate('Details2')
+                        this.props.navigation.dispatch(
+                            CommonActions.navigate({
+                                name: 'MineIndex',
+                                key:new Date().getTime()
+                            })
+                        );
                     }}
                 />
             </View>

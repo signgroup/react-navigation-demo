@@ -15,7 +15,7 @@ export default class Home extends Component {
                     title="Go to Details"
                     onPress={() =>{
                         console.log('Details1')
-                        this.props.navigation.navigate('Details1')
+                        this.props.navigation.navigate('HomeDetail')
                     }}
                 />
             </View>
