@@ -7,6 +7,12 @@ import {
 } from 'react-native';
 
 export default class Home extends Component {
+    static navigationOptions = ({navigation, screenProps}) =>(
+       {
+        title: '首页',
+    });
+
+
     render() {
         return (
             <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
@@ -15,7 +21,7 @@ export default class Home extends Component {
                     title="Go to Details"
                     onPress={() =>{
                         console.log('Details1')
-                        this.props.navigation.navigate('Details1')
+                        this.props.navigation.navigate('HomeDetail')
                     }}
                 />
             </View>
